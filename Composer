@@ -1,0 +1,24 @@
+--This dataset contains a comprehensive list of the most famous classical composers. The dataset provides insights into the composers details such as their best piece and the duration of that piece.
+The dataset includes information such as composers name, nationality, birth year, death year , their most famous works, and the duration of their famous piece.
+
+-- What Nationality is the most represented?
+(Pivot Table > Column = Nationality, Row = Composer, Count of Values = Nationality)
+
+-- What was William Byrd's biggest Piece?
+(=VLOOKUP(L7,A1:F102, E,FALSE))  
+
+--What was the average Duration of the biggest pieces?
+(=AVERAGE(F3:F101))
+
+--How many Durations were missing?
+(=COUNTBLANK(F3:F101))
+
+--What were the top 10 Durations of all the Biggest Pieces?
+(Pivot Table > Rows = Composer + Duration of Biggest Piece, Value = Duration of Biggest Piece)
+
+--Which Composer was born the earliest?
+(Pivot Table > Rows = Born + Composer)
+
+--What is the total duration of all the big pieces?
+(=SUM(F3:F101))
+
